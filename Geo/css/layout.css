@@ -1,0 +1,33 @@
+/* Layout - Persistent */
+html, body { font-family: sans-serif; }
+
+/* Parent Wrapper */
+#pw { }
+	/* Heading */
+	#pw #hd { background: #000; overflow: auto; }
+		
+		/* Header Text */
+		#hd header { float: left; }
+			#hd header h1 { color: #FFF; display: inline-block; font-weight: bold;}
+			#hd header h4 { background: #FFF; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; color: #000; display: inline-block; font-style: italic; }
+		
+		/* Navigation */
+		#hd nav { color: #fff; float: right; margin: 10px 0 0; }
+			#hd nav li { display: inline-block; font-family: Univers, 'Nimbus Sans', Helvetica, Arial, sans-serif; font-size: 1.25em; letter-spacing: -.05em; margin: 0 5px; }
+				#hd nav li a { color: #fff; text-decoration: none; }
+					#hd nav li a.ac { background: #fff; border-bottom: 5px solid #fff; border-left: 3px solid #fff; border-right: 3px solid #fff;  border-top: 11px solid #fff; color: #000; font-style: italic; }
+					
+		/* Body Text */
+		#bd { }
+			
+			/* Jukebox */
+			#bd .playerWrapper { margin: 10px 50px; }
+				#bd .playerWrapper h2 { font-size: 30px; font-family: 'Nimubs Sans', 'Droid Sans', Helvetica, Arial, sans-serif; font-weight: bold; }
+				#bd .playerWrapper p.about { padding: 15px 0; }
+			
+				#bd ul.albums { overflow: hidden;}
+					ul.albums li { border: 1px solid #000; padding: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-border-radius: 5px; margin: 10px; float: left; }
+						ul.albums li h5 { font-size: 24px; }
+						
+		/* Footer */
+		#ft { background: #000; }
