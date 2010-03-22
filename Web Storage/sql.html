@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
   <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>HTML5 Jukebox</title>
+    <title>HTML5 Web Storage - SQL</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="css/layout.css"  />
 	<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
@@ -25,167 +25,12 @@
 		</div>
 		<div id="bd">
 			<div class="playerWrapper">
-				<h2>HTML5 Jukebox</h2>
-				<p class="about">This web app requires HTML5 support, <span id="browserSupportHTML5"></span>. Additional CSS3 stuff will render in Safari, Chrome, and Firefox (yours is <span id="browserSupportCSS3"></span>). Internet Explorer uses go play with Flash.</p>
-			
-				<ul class="albums">
-					<li>
-						<div class="album">
-							<h5>Serene</h5>
-							<p>Kevin MacLeod</p>
-							
-							<div class="player">
-								<img src="img/036.jpg" alt="image cover" />
-								<a href="#" id="track1">Play</a>
-								<a href="#" class="pause">Pause</a>
-								
-								<audio src="audio/Serene.mp3" controls>
-									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
-								</audio>
-							</div>
-						</div>
-					</li>
-					
-					<li>
-						<div class="album">
-							<h5>Frost Waltz</h5>
-							<p>Kevin MacLeod</p>
-							
-							<div class="player">
-								<img src="img/045.jpg" alt="image cover" />
-								<a href="#" id="track2">Play</a>
-								<a href="#" class="pause">Pause</a>
-								
-								<audio src="audio/Frost Waltz.mp3" controls>
-									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
-								</audio>
-							</div>
-						</div>
-					</li>
 
-					<li>
-						<div class="album">
-							<h5>To The Ends</h5>
-							<p>Kevin MacLeod</p>
-							
-							<div class="player">
-								<img src="img/043.jpg" alt="image cover" />
-								<a href="#" id="track3">Play</a>
-								<a href="#" class="pause">Pause</a>
-								
-								<audio src="audio/To the Ends.mp3" controls>
-									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
-								</audio>
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="album">
-							<h5>Shores of Avalon</h5>
-							<p>Kevin MacLeod</p>
-							
-							<div class="player">
-								<img src="img/016.jpg" alt="image cover" />
-								<a href="#" id="track4">Play</a>
-								<a href="#" class="pause">Pause</a>
-								
-								<audio src="audio/Shores of Avalon.mp3" controls>
-									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
-								</audio>
-							</div>
-						</div>
-					</li>					
-
-					<li>
-						<div class="album">
-							<h5>Wounded</h5>
-							<p>Kevin MacLeod</p>
-							
-							<div class="player">
-								<img src="img/013.jpg" alt="image cover" />
-								<a href="#" id="track5">Play</a>
-								<a href="#" class="pause">Pause</a>
-								
-								<audio src="audio/Wounded.mp3" controls>
-									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
-								</audio>
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="album">
-							<h5>Unpromised</h5>
-							<p>Kevin MacLeod</p>
-							
-							<div class="player">
-								<img src="img/036.jpg" alt="image cover" />
-								<a href="#" id="track6">Play</a>
-								<a href="#" class="pause">Pause</a>
-								
-								<audio src="audio/Unpromised.mp3" controls>
-									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
-								</audio>
-							</div>
-						</div>
-					</li>
-					
-					<li>
-						<div class="album">
-							<h5>Atlantean Twilight</h5>
-							<p>Kevin MacLeod</p>
-							
-							<div class="player">
-								<img src="img/016.jpg" alt="image cover" />
-								<a href="#" id="track7">Play</a>
-								<a href="#" class="pause">Pause</a>
-								
-								<audio src="audio/Atlantean Twilight.mp3" controls>
-									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
-								</audio>
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="album">
-							<h5>Private Reflection</h5>
-							<p>Kevin MacLeod</p>
-							
-							<div class="player">
-								<img src="img/016.jpg" alt="image cover" />
-								<a href="#" id="track8">Play</a>
-								<a href="#" class="pause">Pause</a>
-								
-								<audio src="audio/Private Reflection.mp3" controls>
-									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
-								</audio>
-							</div>
-						</div>
-					</li>					
-					
-				</ul>
-			
-			</div>
-			
-			<div class="artistDetails">
-				<aside>
-					<h2>About Kevin MacLeod</h2>
-					
-					<p>Lorem Ipsum</p>
-				</aside>
-			</div>
 		</div>
 		<div id="ft">
-			<div class="cc">
-				<a href="http://creativecommons.org/licenses/by/3.0/"><img src="img/ccby88x31.png" alt="CC BY" />
-				<p>Music licensed under Creative Commons</p>
-			</div>
+		
 		</div>
 	</div>
-	
-	<!-- GA -->
 	
 	<!-- Scripts -->
 	<script type="text/javascript">
@@ -203,16 +48,6 @@
 				document.getElementById("browserSupportHTML5").innerHTML = "<strong class='ohsnap'>Which you don't have</strong>";
 			} //endif
 		} //end
-	
-		//Audio Player Controls
-		
-		/* playAudio()
-		 *
-		 */
-		 
-		/* stopAudio()
-		 *
-		 */
 	</script>
   </body>
 </html>
