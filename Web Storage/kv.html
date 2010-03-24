@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="js/modernizr-1.1.min.js"></script>
   </head> 
  
-  <body>
+  <body onload="updateManifest()">
 	<div id="pw">
 		<div id="hd">
 			<header>
@@ -76,8 +76,8 @@
 		/* WEB STORAGE FUNCTIONS */
 		function getValue() {
 			var name = document.forms.kvAccess.nameTxtField.value;
-			document.forms.kvAccess.valueTxtArea.value = localStorage.removeItem(name);
-			doShowAll();
+			document.forms.kvAccess.valueTxtArea.value = localStorage.getItem(name);
+			updateManifest();
 		}
 		
 		function setValue() {
@@ -89,8 +89,8 @@
 		
 		function removeEntry() {
 			var name = document.forms.kvAccess.nameTxtField.value;
-			document.forms.kvAccess.valueTxtArea.value = localStorage.removeItem();
-			doShowAll();
+			document.forms.kvAccess.valueTxtArea.value = localStorage.removeItem(name);
+			updateManifest();
 		}
 		
 		function deleteEverything() {

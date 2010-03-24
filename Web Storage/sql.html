@@ -25,7 +25,18 @@
 		</div>
 		<div id="bd">
 			<div class="playerWrapper">
-
+				<h2>Use in combination with a browser's Database management tools</h2>
+				
+				<fieldset name="SQLAccess">
+					<label for="SQLField">Enter in any SQL commands here</label>
+					
+					<textarea name="SQLField" id="SQLField"></textarea>
+				
+					<p>
+						<input type="button" name="executeSQL" value="Execute" />
+					</p>
+				</fieldset>
+			</div>
 		</div>
 		<div id="ft">
 		
@@ -48,6 +59,11 @@
 				document.getElementById("browserSupportHTML5").innerHTML = "<strong class='ohsnap'>Which you don't have</strong>";
 			} //endif
 		} //end
+		
+		//SQL Database Commands
+		function executeSQL() {
+		
+		}
 	</script>
   </body>
 </html>
