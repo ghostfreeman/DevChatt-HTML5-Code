@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HTML5 Jukebox</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="css/layout.css"  />
+	<script type="text/javascript" src="js/modernizr-1.1.min.js"></script>
+  </head> 
+ 
+  <body onload="checkForHTML5();">
+	<div id="pw">
+		<div id="hd">
+			<header>
+				<h1>HTML5</h1>
+				<h4>Audio Demo</h4>
+			</header>
+		</div>
+		<div id="bd">
+			<div class="playerWrapper">
+				<h2>HTML5 Jukebox</h2>
+				<p class="about">This web app requires HTML5 support, <span id="browserSupportHTML5"></span>. Additional CSS3 stuff will render in Safari, Chrome, and Firefox. Internet Explorer uses go play with Flash.</p>
+			
+				<ul class="albums">
+					<li>
+						<div class="album">
+							<h5>Serene</h5>
+							<p>Kevin MacLeod</p>
+							
+							<div class="player">
+								<img src="img/036.jpg" alt="image cover" />
+								
+								<audio controls preload>
+									<source src="audio/Serene.mp3" type="audio/mp3">
+									<source src="audio/Serene.ogg" type="audio/ogg">
+									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
+								</audio>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="album">
+							<h5>Frost Waltz</h5>
+							<p>Kevin MacLeod</p>
+							
+							<div class="player">
+								<img src="img/045.jpg" alt="image cover" />
+								
+								<audio controls preload>
+									<source src="audio/Frost Waltz.mp3" type="audio/mp3">
+									<source src="audio/Frost Waltz.ogg" type="audio/ogg">
+									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
+								</audio>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="album">
+							<h5>To The Ends</h5>
+							<p>Kevin MacLeod</p>
+							
+							<div class="player">
+								<img src="img/043.jpg" alt="image cover" />
+								
+								<audio controls preload>
+									<source src="audio/To the Ends.mp3" type="audio/mp3">
+									<source src="audio/To the Ends.ogg" type="audio/ogg">
+									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
+								</audio>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="album">
+							<h5>Shores of Avalon</h5>
+							<p>Kevin MacLeod</p>
+							
+							<div class="player">
+								<img src="img/016.jpg" alt="image cover" />
+								
+								<audio controls preload>
+									<source src="audio/Shores of Avalon.mp3" type="audio/mp3">
+									<source src="audio/Shores of Avalon.ogg" type="audio/ogg">
+									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
+								</audio>
+							</div>
+						</div>
+					</li>					
+
+					<li>
+						<div class="album">
+							<h5>Wounded</h5>
+							<p>Kevin MacLeod</p>
+							
+							<div class="player">
+								<img src="img/013.jpg" alt="image cover" />
+								
+								<audio controls preload>
+									<source src="audio/Wounded.mp3" type="audio/mp3">
+									<source src="audio/Wounded.ogg" type="audio/ogg">
+									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
+								</audio>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="album">
+							<h5>Unpromised</h5>
+							<p>Kevin MacLeod</p>
+							
+							<div class="player">
+								<img src="img/036.jpg" alt="image cover" />
+								
+								<audio controls preload>
+									<source src="audio/Unpromised.mp3" type="audio/mp3">
+									<source src="audio/Unpromised.ogg" type="audio/ogg">
+									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
+								</audio>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="album">
+							<h5>Atlantean Twilight</h5>
+							<p>Kevin MacLeod</p>
+							
+							<div class="player">
+								<img src="img/016.jpg" alt="image cover" />
+								
+								<audio controls preload>
+									<source src="audio/Atlantean Twilight.mp3" type="audio/mp3">
+									<source src="audio/Atlantean Twilight.ogg" type="audio/ogg">
+									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
+								</audio>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="album">
+							<h5>Private Reflection</h5>
+							<p>Kevin MacLeod</p>
+							
+							<div class="player">
+								<img src="img/016.jpg" alt="image cover" />
+								
+								<audio controls preload>
+									<source src="audio/Private Reflection.mp3" type="audio/mp3">
+									<source src="audio/Private Reflection.ogg" type="audio/ogg">
+									<p>This feature doesn't work in your browser, or you're missing the proper codec</p>
+								</audio>
+							</div>
+						</div>
+					</li>					
+					
+				</ul>
+			
+			</div>
+		</div>
+		<div id="ft">
+			<div class="cc">
+				<a href="http://creativecommons.org/licenses/by/3.0/"><img src="img/ccby88x31.png" alt="CC BY" />
+				<p>Music licensed under Creative Commons</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Scripts -->
+	<script type="text/javascript">
+		//Modernizr Init
+		
+		/* checkForHTML5()
+		 * Checks for HTML5 audio and video tag support in the browser
+		 * Returns a text string that is either favorable or unfavorable by means of innerHTML (NO EXPLICIT RETURN)
+		 * @return No explicit return
+		 */
+		function checkForHTML5() {
+			if ((Modernizr.video) && (Modernizr.audio)) {
+				document.getElementById("browserSupportHTML5").innerHTML = "<strong class='supergreen'>Which you have</strong>";
+			} else {
+				document.getElementById("browserSupportHTML5").innerHTML = "<strong class='ohsnap'>Which you don't have</strong>";
+			} //endif
+		} //end
+	
+	</script>
+  </body>
+</html>

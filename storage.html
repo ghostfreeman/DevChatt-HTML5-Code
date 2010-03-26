@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HTML5 Web Storage - Key/Value</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<script type="text/javascript" src="js/modernizr-1.1.min.js"></script>
+  </head> 
+ 
+  <body onload="updateManifest()">
+	<div id="pw">
+		<div id="hd">
+			<header>
+				<h1>HTML5</h1>
+				<h4>Web Storage Demo</h4>
+			</header>
+		</div>
+		<div id="bd">
+			<p id="browserSupportHTML5"></p>
+			<div class="playerWrapper">
+				<form action="#" method="post" name="kvAccess" id="kv-access">
+					<fieldset name="access">
+						<p>
+							<label for="valueTxtArea">Value:</label>
+							<textarea name="valueTxtArea" id="valueTxtArea"></textarea>
+						</p>
+						<p>
+							<label for="nameTxtField">Name:</label>
+							<input type="txt" name="nameTxtField" id="nameTxtField" />
+						</p>
+						<p>
+							<input type="button" value="Get Value" onclick="getValue();" />
+							<input type="button" value="Set Value" onclick="setValue();" />
+							<input type="button" value="Remove Entry" onclick="removeEntry();" />
+						</p>
+					</fieldset>
+				
+				
+					<div class="kv-table-manifest">
+					<table id="pairs" class="kv-table-manifest-table">
+					</table>
+					<p>
+						<input type="button" value="Clear Table" onclick="deleteEverything();" />
+					</p>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="ft">
+		</div>
+	</div>
+	
+	<!-- Scripts -->
+	<script type="text/javascript">
+		//Modernizr Init
+		/* checkForHTML5()
+		 * Checks for HTML5 audio and video tag support in the browser
+		 * Returns a text string that is either favorable or unfavorable by means of innerHTML (NO EXPLICIT RETURN)
+		 * @return No explicit return
+		 */
+		function checkForHTML5() {
+			if ((Modernizr.video) && (Modernizr.audio)) {
+				document.getElementById("browserSupportHTML5").innerHTML = "<strong class='supergreen'>Which you have</strong>";
+			} else {
+				document.getElementById("browserSupportHTML5").innerHTML  = "<strong class='ohsnap'>Which you don't have</strong>";
+			} //endif
+		} //end
+		
+		/* WEB STORAGE FUNCTIONS */
+		function getValue() {
+			var name = document.forms.kvAccess.nameTxtField.value;
+			document.forms.kvAccess.valueTxtArea.value = localStorage.getItem(name);
+			updateManifest();
+		}
+		
+		function setValue() {
+			var name = document.forms.kvAccess.nameTxtField.value;
+			var data = document.forms.kvAccess.valueTxtArea.value;
+			localStorage.setItem(name, data);
+			updateManifest();
+		}
+		
+		function removeEntry() {
+			var name = document.forms.kvAccess.nameTxtField.value;
+			document.forms.kvAccess.valueTxtArea.value = localStorage.removeItem(name);
+			updateManifest();
+		}
+		
+		function deleteEverything() {
+			localStorage.clear();
+			updateManifest();
+		}
+		
+		function updateManifest() {
+			var key = ""
+			var pairs = "<tr><th>Name</th><th>Value</th></tr>\n"
+			var i = 0;
+			for (i = 0; i < localStorage.length-1; i++) {
+				key =  localStorage.key(i);
+				pairs += "<tr><td>"+key+"</td>\n<td>"+localStorage.getItem(key)+"</td></tr>\n";
+			} //End for
+			if (pairs == "<tr><th>Name</th><th>Value</th></tr>\n") {
+				pairs += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
+			} //End if
+			document.getElementById('pairs').innerHTML = pairs;
+		} //end updateManifest
+	</script>	
+  </body>
+</html>
