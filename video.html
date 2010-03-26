@@ -19,7 +19,7 @@
 		<div id="bd">
 			<div class="stage">
 				<div class="stageInner">
-					<video preload controls>
+					<video preload controls id="video">
 						<source src="#" />
 					</video>
 				</div>
@@ -45,16 +45,22 @@
 				document.getElementById("browserSupportHTML5").innerHTML = "<strong class='ohsnap'>Which you don't have</strong>";
 			} //endif
 		} //end
-	
 		//Video Player Controls
 		
 		/* playVideo()
-		 *
+		 * Plays the video. Duh.
 		 */
+		function playVideo() {
+			var v = document.getElementById("video");
+			v.play();
+		}
 		 
-		/* stopVideo()
-		 *
+		/* pauseVideo()
+		 * Pauses the video.
 		 */
+		function pauseVideo() {
+			document.getElementById("video").pause();
+		}
 	</script>
   </body>
 </html>
